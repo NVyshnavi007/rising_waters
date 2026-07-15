@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+flood_prediction.db
+flood_dataset.csv
+.DS_Store
