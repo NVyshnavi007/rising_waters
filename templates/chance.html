@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}High Risk - Flood Prediction{% endblock %}
+{% block content %}
+<div class="result-wrapper">
+    <div class="glass-card result-card danger">
+        <div class="icon-danger">⚠️</div>
+        <h2>High Flood Risk Detected</h2>
+        <p class="prob-text">Probability: <strong>{{ prob }}%</strong></p>
+        <p>The meteorological parameters indicate a high likelihood of flooding in the region. Authorities should issue early evacuation advisories and prepare disaster response teams.</p>
+        <div class="result-actions">
+            <a href="{{ url_for('predict_page') }}" class="btn btn-outline">Analyze Another Region</a>
+            <a href="{{ url_for('history') }}" class="btn btn-primary">View History</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

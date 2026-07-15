@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Home - Flood Prediction{% endblock %}
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Predict Floods Before They Happen</h1>
+        <p>A machine-learning powered early warning system for predicting flood risks based on historical weather patterns. Utilizing advanced algorithms like XGBoost, we help authorities and disaster management teams save lives and resources.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('register') }}" class="btn btn-primary btn-large">Get Started</a>
+            <a href="{{ url_for('login') }}" class="btn btn-outline btn-large">Login to Predict</a>
+        </div>
+    </div>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h3>Highly Accurate</h3>
+        <p>Our XGBoost model achieves over 80% accuracy based on comprehensive weather features.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Real-time Analysis</h3>
+        <p>Get instant flood risk predictions by inputting localized weather conditions.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Historical Tracking</h3>
+        <p>Keep a detailed history of your regions' risk assessments over time.</p>
+    </div>
+</div>
+{% endblock %}

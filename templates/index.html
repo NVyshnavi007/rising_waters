@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Predict Flood Risk - Flood Prediction{% endblock %}
+{% block content %}
+<div class="form-wrapper wide">
+    <div class="glass-card">
+        <h2>Flood Risk Analyzer</h2>
+        <p>Enter the meteorological parameters below to assess the likelihood of flooding.</p>
+        
+        <form method="POST" action="{{ url_for('predict_page') }}">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="annual_rainfall">Annual Rainfall (mm)</label>
+                    <input type="number" step="0.01" id="annual_rainfall" name="annual_rainfall" required placeholder="e.g. 1500.5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="seasonal_rainfall">Seasonal Rainfall (mm)</label>
+                    <input type="number" step="0.01" id="seasonal_rainfall" name="seasonal_rainfall" required placeholder="e.g. 500.2">
+                </div>
+                
+                <div class="form-group">
+                    <label for="temperature">Temperature (°C)</label>
+                    <input type="number" step="0.01" id="temperature" name="temperature" required placeholder="e.g. 28.5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="humidity">Humidity (%)</label>
+                    <input type="number" step="0.01" id="humidity" name="humidity" required placeholder="e.g. 85.0">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="cloud_visibility">Cloud Visibility / Cover (%)</label>
+                    <input type="number" step="0.01" id="cloud_visibility" name="cloud_visibility" required placeholder="e.g. 70.0">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large mt-2">Analyze Risk</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
